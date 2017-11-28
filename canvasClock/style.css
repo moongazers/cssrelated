@@ -1,0 +1,14 @@
+#clock-canvas-container {
+    position: relative;
+    height: 600px;
+}
+
+#clock-canvas-container canvas {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    border: 3px black solid;
+}

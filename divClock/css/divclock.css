@@ -1,0 +1,42 @@
+/*
+Edited by Moongazer
+*/
+/* 
+    Created on : Nov 13, 2014, 10:59:27 AM
+    Author     : moongazers
+*/
+#platecontainer {
+    //default color is transparent;
+    position: relative;
+    background-image: url("../images/plate.png");
+    /*border: 5px solid black;*/
+    height: 600px;
+    width: 1000px;
+    text-align: center;
+}
+
+#hourcontainer {
+    position: absolute;
+    background-image: url("../images/h.png");
+    /*border: 5px solid blue;*/
+
+    height: 600px;
+    width: 1000px;
+    
+}
+
+#mincontainer {
+    position: absolute;
+    background-image: url("../images/m.png");
+    /*border: 5px solid blue;*/
+    height: 600px;
+    width: 1000px;
+}
+
+#seccontainer {
+    position: absolute;
+    background-image: url("../images/s.png");
+    /*border: 5px solid blue;*/
+    height: 600px;
+    width: 1000px;
+}

@@ -1,0 +1,97 @@
+/*
+Edited by Moongazer
+*/
+/* 
+    Created on : Nov 13, 2014, 6:01:24 PM
+    Author     : moongazers
+*/
+.frame {
+    position: relative;
+    height: 300px;
+    width: 250px;
+    border: 5px solid black;
+    border-color: #508dba;
+    text-align: center;
+    margin: 50px auto;
+    background-color: #e4f4f7;
+    font-family: cursive;
+}
+
+.frame label {
+    margin: 20px auto;
+    width: 220px;
+    height: 50px;
+    border: 1px solid gray;
+    display: block;
+    text-align: center;
+    background: linear-gradient(#e4f4f7, white);
+    /*line-height: 50px;*/
+    
+}
+
+.frame label span {
+    width: 210px;
+    height: 25px;
+    margin: 15px auto;
+    /*border: 1px blue solid;*/
+    display: block;
+    text-align: right;
+    overflow: hidden;
+    font-size: 20px;
+    /*letter-spacing:*/   /*for letter spacing*/
+}
+
+
+.frame button {
+    margin: 6px 1px 6px 1px;
+    width: 38px;
+    height: 25px;
+    /*float: left;*/
+    border: 1px solid gray;
+    font-size: 15px;
+    transition: background-color 1s ease-in-out;
+    border-radius: 3px;  
+}
+
+#equal {
+    position: absolute;
+    height: 63px;
+}
+
+#zero {
+    position: absolute;
+    width: 84px;
+    bottom: 23px;
+    left: 15px;
+}
+
+#point {
+    position: absolute;
+    bottom: 23px;
+    left: 105px;
+}
+
+#plus {
+    position: absolute;
+    bottom: 23px;
+    left: 150px;
+}
+
+.number {
+    background: linear-gradient(white, #e4f4f7);
+}
+
+button:not(.number) {
+    background: #e4f4f7; 
+}
+
+.frame button:hover {
+    //linear-gradient(css3?) seems to have exclusive point value;
+    background: linear-gradient(white, yellow);
+    /*background-position:100px;*/
+    /*background-color: yellow;*/
+}
+
+#placeholder {
+    visibility: hidden;
+}

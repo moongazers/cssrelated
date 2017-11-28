@@ -1,0 +1,49 @@
+/*
+Edited by Moongazer
+*/
+/* 
+    Created on : Nov 16, 2014, 10:27:23 AM
+    Author     : moongazers
+*/
+
+/*siblings:  after xxx elem..*/
+
+.board {
+    font-size: 50px;
+    position: relative;
+}
+
+#cssStar {
+    /*transform: rotateY(180deg);*/
+    /*Since css can only choose elem's siblings, need to rotate/right-to-left to utilize that*/
+    direction: rtl;
+    /*unicode-bidi:bidi-override;*/  /*maybe rendered as punctuation mark? || real text rtl will not affect show effect */
+    text-align: left;
+    
+}
+
+/*careful:   xx:hover XXX {}  XXX should be child elem  ->desendent selector*/
+/*DONT USE THAT // COMMENT AGAIN!!!!!!*/
+/*::before with absolute: insert sth overlap!! Or, it would only insert before that elem,
+and push original elem afterwards*/
+#cssStar span:hover::before, #cssStar span:hover ~ span::before{
+    content: "\2605";
+    color: orange;
+    position: absolute;
+}
+
+/*No onclick event, cannot do anything about clicking in css?*/
+
+/*#cssStar span:active {
+    font-size: 100px;
+}*/
+
+
+/*For class manipulation*/
+.oranged::before {
+    content: "\2605";
+    color: orange;
+    position: absolute;
+}
+
+

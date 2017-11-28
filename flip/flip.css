@@ -1,0 +1,55 @@
+
+/* A container is needed, since for the back hover part, it can not be
+hovered due to back pic is hidden at first.*/
+
+#container {
+    /*This "relative" is a must, or "absolute" of its child would not
+    take effect*/
+    position: relative;
+    
+    border: 5px solid black;
+    
+    /*I need to confine the container's space:
+    1. Without confining width, back pic 180deg rotate -> 
+    start at the right of the screen
+    2. It's not the specific div that is hovered. It's the container that is
+    hovered so the rotateY -- Y here is based on the container.*/
+    width: 390px;
+    height: 245px;
+    
+    /*It is the container that is hovered and transformed, 
+    but how could it make child pics rotate too? */
+    transition: transform 3s;
+    
+    /*Yeah This is how it rotate the child pics.*/
+    transform-style: preserve-3d;
+    
+}
+
+#back, #front {
+
+    /*I do not need to set width or height for the two pics, since
+    the two pics are of the same resolution. I just need to place it
+    according to their first parent element*/
+    position: absolute;
+    
+    /*The back of a pic is hidden.  So when turn back, pic invisible.*/
+    backface-visibility: hidden;
+    /*I do not need to set transition here either, cuz it's the container
+    which is hovered and its transform-style would rotate two pics too */
+}
+
+#back {
+
+    /* back pic is turned and hid at first*/
+    transform: rotateY(180deg);
+    z-index: -1;
+    
+    /*width is 4px shorter than that of front*/
+    left: 4px;
+}
+
+#container:hover {
+    transform: rotateY(180deg);
+}
+
